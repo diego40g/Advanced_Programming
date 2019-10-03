@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import mysql.connector as mariadb
+
+mariadb_conexion = mariadb.connect(host='localhost', port='3306',
+                                   user='root', password='1234abcd', database='university')
+cursor = mariadb_conexion.cursor()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    ##'rest_framework',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +82,13 @@ WSGI_APPLICATION = 'firstPage.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'firstPage',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
