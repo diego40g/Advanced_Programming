@@ -26,7 +26,7 @@ def get_author():
     return jsonify(serialized_authors)
 
 ##URI LIBROS
-"""
+
 @urls.route('/book', methods=POST)
 def created_book():
     book_serializer = BookSerializer()
@@ -42,4 +42,4 @@ def get_book():
     book_serializer = BookSerializer()
     books = Book.query.all()
     serialized_books = book_serializer.dump(books)
-    return jsonify(serialized_books)"""
+    return jsonify(serialized_books)
