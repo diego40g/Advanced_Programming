@@ -1,0 +1,8 @@
+Computador:
+{
+	"marca":"hp",
+	"tipo":"portatil",
+	"fechaFab":"12-10-2010",
+	"pantallaPUL":14.0,
+	"teclado":"esp"
+}

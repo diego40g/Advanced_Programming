@@ -1,0 +1,20 @@
+Televisor
+- marca:String
++ modelo:String
+-----------
++ proyectar
+
+Escritorio
+- mesa
+- silla
+-----------
++sentarse
+
+Computador
+- marca
+- tipo
+-fechaFab
+-----------
++ encender
++ apagar
+
